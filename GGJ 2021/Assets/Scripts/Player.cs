@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
 
    private void FixedUpdate()
    {
-        Vector2 dir = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-        body.velocity = dir.normalized;
+        Vector2 dir = new Vector2(horizontal, vertical);
+        body.velocity = dir.normalized * runSpeed;
    }
 
    void OnTriggerEnter2D(Collider2D col)

@@ -15,10 +15,10 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(obj.position.x > offX || obj.position.y > offY) {
+        //if(obj.position.x > offX || obj.position.y > offY) {
             Vector3 target = new Vector3(obj.position.x, obj.position.y, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime);
-        }
+        //}
     }
 
 

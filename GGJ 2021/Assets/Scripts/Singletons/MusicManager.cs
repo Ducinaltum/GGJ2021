@@ -33,7 +33,8 @@ public class MusicManager : MonoBehaviour {
     private double nextEventTime;
     public int flip = 0;
     
-    private AudioSource[] musicClipsAuso = new AudioSource[5];
+    private AudioSource[] musicClipsAuso_A = new AudioSource[5];
+    private AudioSource[] musicClipsAuso_B = new AudioSource[5];
     private bool running = false;
 
 	public int health = 5;
@@ -44,33 +45,41 @@ public class MusicManager : MonoBehaviour {
 
 		track = (int)Ambient.intro;
         int i = 0;
-        while (i < 2) {
-            GameObject child = new GameObject("MusicPlayer");
-            child.transform.parent = gameObject.transform;
-            audioSources[i] = child.AddComponent<AudioSource>();
+        while (i < 5) {
+            GameObject child_A = new GameObject("MusicPlayer");
+            child_A.transform.parent = gameObject.transform;
+            musicClipsAuso_A[i] = child_A.AddComponent<AudioSource>();
+            GameObject child_B = new GameObject("MusicPlayer");
+            child_B.transform.parent = gameObject.transform;
+            musicClipsAuso_B[i] = child_B.AddComponent<AudioSource>();
+            musicClipsAuso_A[i].clip = inGameMusicClips[i];
+            musicClipsAuso_B[i].clip = inGameMusicClips[i];
             i++;
         }
         nextEventTime = AudioSettings.dspTime + 2.0F;
         running = true;
+        Debug.Log(nextEventTime);
     }
 
     void Update()
     {
         if (Time.timeScale > 0)
         {
-            int track = 0;
-            if (health <= 2)
-            {
-                track = (int)Ambient.lowHealth;
-            }
             //Cuando termina el nivel CAMBIAR LA CONDICION
             if (true == false)
             {
-                foreach (AudioSource source in audioSources)
+                /*
+                Destruir todo cuando termina el juego
+                foreach (AudioSource source in musicClipsAuso_A)
+                {
+                    Destroy(source);
+                }
+                                foreach (AudioSource source in musicClipsAuso_B)
                 {
                     Destroy(source);
                 }
                 Camera.main.GetComponent<AudioSource>().Play();
+                */
             }
 
             if (!running)
@@ -79,12 +88,13 @@ public class MusicManager : MonoBehaviour {
             double time = AudioSettings.dspTime;
             if (time + 1.0F > nextEventTime)
             {
-                foreach(AudioSource auso in musicClipsAuso){
-                    audioSources[flip].clip = clips[(int)track];
-                    audioSources[flip].PlayScheduled(nextEventTime);
+                Debug.Log("here");
+                AudioSource[] ausos = flip == 0? musicClipsAuso_A: musicClipsAuso_B;
+                foreach(AudioSource auso in ausos){
+                    auso.PlayScheduled(nextEventTime);
                 }
                 nextEventTime += 60.0F / bpm * numBeatsPerSegment;
-                //flip = 1 - flip;
+                flip = 1 - flip;
             }
         }
     }
