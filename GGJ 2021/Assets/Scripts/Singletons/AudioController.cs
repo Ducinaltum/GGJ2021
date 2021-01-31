@@ -14,6 +14,7 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     AudioSource _tinnitusAS;
     
+    public MusicManager music;
 	public static AudioController InstanceAC {
 		get {
 			return _instanceAC;
@@ -50,4 +51,6 @@ public class AudioController : MonoBehaviour
     public void SetTinnitusVolume(float value){
         _tinnitusAS.volume = value;
     }
+
+    
 }

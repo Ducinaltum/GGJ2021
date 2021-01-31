@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HeiserGroupController : MonoBehaviour
 {
-    HeiserHole[] heisers;
-    AudioClip[] clips;
-    AudioClip wrongClip;
+    public HeiserHole[] heisers;
+    public AudioClip[] clips;
+    public AudioClip wrongClip;
     int indexForWrong;
 
     public bool hasBeenCleared;

@@ -30,6 +30,24 @@ public class GameController : MonoBehaviour
     private IEnumerator WaitForFadeIn(float time){
         yield return new WaitForSeconds(time);
         SceneManager.UnloadSceneAsync("Cave");
+
+		SceneManager.LoadSceneAsync("Center", LoadSceneMode.Additive);
+		SceneManager.LoadSceneAsync("Heiser", LoadSceneMode.Additive);
+		SceneManager.LoadSceneAsync("NorEste", LoadSceneMode.Additive);
+		SceneManager.LoadSceneAsync("Norte", LoadSceneMode.Additive);
+		SceneManager.LoadSceneAsync("SurEste", LoadSceneMode.Additive);
+		SceneManager.LoadSceneAsync("SurOeste", LoadSceneMode.Additive);
         UIController.InstanceUI.FadeWhite(EFade.In);
     }
+
+	public void StartGame(){
+				AudioController.InstanceAC.music.StartMusic();
+		SceneManager.LoadSceneAsync("Cave", LoadSceneMode.Additive);
+	}
+
+	void Update(){
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			Application.Quit();
+		}
+	}
 }

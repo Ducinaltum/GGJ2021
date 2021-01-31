@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 //Agregarle un audioSource a la camara y asignarle es clip "dead"
 //Ponerle volume 0.2 al audioSource del prefab Laser
@@ -37,11 +38,13 @@ public class MusicManager : MonoBehaviour {
     private AudioSource[] musicClipsAuso_B = new AudioSource[5];
     private bool running = false;
 
+    public AudioMixerGroup mixerGroup;
+
 	public int health = 5;
 
 	int track;
 
-    void Start() {
+    public void StartMusic() {
 
 		track = (int)Ambient.intro;
         int i = 0;
@@ -58,7 +61,6 @@ public class MusicManager : MonoBehaviour {
         }
         nextEventTime = AudioSettings.dspTime + 2.0F;
         running = true;
-        Debug.Log(nextEventTime);
     }
 
     void Update()
@@ -88,7 +90,6 @@ public class MusicManager : MonoBehaviour {
             double time = AudioSettings.dspTime;
             if (time + 1.0F > nextEventTime)
             {
-                Debug.Log("here");
                 AudioSource[] ausos = flip == 0? musicClipsAuso_A: musicClipsAuso_B;
                 foreach(AudioSource auso in ausos){
                     auso.PlayScheduled(nextEventTime);
