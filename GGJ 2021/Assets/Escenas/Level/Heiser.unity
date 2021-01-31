@@ -3597,15 +3597,24 @@ MonoBehaviour:
       corner: 1
     - position: {x: -1.6738434, y: 6.948227, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
+      rightTangent: {x: 0.5235443, y: 1.2101974, z: 0}
+      mode: 2
       height: 1
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: 6.4993286, y: 10.792965, z: 0}
-      leftTangent: {x: -2.8351746, y: -0.007892609, z: 0}
+    - position: {x: -5.7801056, y: 10.324532, z: 0}
+      leftTangent: {x: -0.33821106, y: -1.6021957, z: 0}
+      rightTangent: {x: 0.5376282, y: 2.549839, z: 0}
+      mode: 1
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 0
+    - position: {x: 2.395523, y: 16.354706, z: 0}
+      leftTangent: {x: -1.7408905, y: -0.0048446655, z: 0}
       rightTangent: {x: 3.0730438, y: 0.008556366, z: 0}
       mode: 1
       height: 1
@@ -3718,8 +3727,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: efa9ae719479a9a418eeaac6c12361c4, type: 3}
   - {fileID: 21300000, guid: efa9ae719479a9a418eeaac6c12361c4, type: 3}
   m_LocalAABB:
-    m_Center: {x: 7.2071047, y: 5.728398, z: -0.00501}
-    m_Extent: {x: 9.073437, y: 8.10958, z: 0.00501}
+    m_Center: {x: 5.1244116, y: 7.114192, z: -0.00501}
+    m_Extent: {x: 11.15613, y: 9.495375, z: 0.00501}
 --- !u!1 &1908021607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,15 +3849,15 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
     - position: {x: -14.868652, y: 20.92913, z: 0}
-      leftTangent: {x: 1.1119232, y: 1.6437988, z: 0}
-      rightTangent: {x: -0.5210266, y: -0.76939774, z: 0}
+      leftTangent: {x: 0.6913452, y: 0.61016846, z: 0}
+      rightTangent: {x: -1.6715546, y: -1.475277, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: -17.817581, y: 19.538612, z: 0}
+    - position: {x: -18.406464, y: 18.98436, z: 0}
       leftTangent: {x: 0.25398254, y: 0.7443619, z: 0}
       rightTangent: {x: -0.23835754, y: -0.69169235, z: 0}
       mode: 1
@@ -3857,18 +3866,27 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: -16.321579, y: 16.822678, z: 0}
-      leftTangent: {x: -1.0047554, y: 0.2423318, z: -0}
-      rightTangent: {x: 1.6751006, y: -0.4040089, z: 0}
+    - position: {x: -16.59871, y: 16.753395, z: 0}
+      leftTangent: {x: -1.0047607, y: 0.24233246, z: 0}
+      rightTangent: {x: 0.6869354, y: 1.6271935, z: 0}
+      mode: 2
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 0
+    - position: {x: -14.391754, y: 19.069424, z: 0}
+      leftTangent: {x: -1.4076996, y: -1.0604362, z: 0}
+      rightTangent: {x: 0.8254547, y: 0.62166214, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: -12.037628, y: 19.715847, z: 0}
-      leftTangent: {x: -1.4076996, y: -1.0604362, z: 0}
-      rightTangent: {x: 1.7811584, y: 1.3414078, z: 0}
+    - position: {x: -11.565475, y: 21.845661, z: 0}
+      leftTangent: {x: -1.1071777, y: -0.7149811, z: 0}
+      rightTangent: {x: 1.2922363, y: 0.8333626, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -3876,7 +3894,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 0
     - position: {x: -8.701782, y: 23.067047, z: 0}
-      leftTangent: {x: -0.20292664, y: -0.56220627, z: 0}
+      leftTangent: {x: -0.10888672, y: -0.30165863, z: 0}
       rightTangent: {x: 1.1485138, y: 3.181961, z: 0}
       mode: 1
       height: 1
@@ -4061,8 +4079,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: efa9ae719479a9a418eeaac6c12361c4, type: 3}
   - {fileID: 21300000, guid: efa9ae719479a9a418eeaac6c12361c4, type: 3}
   m_LocalAABB:
-    m_Center: {x: -1.5088844, y: 15.103867, z: -0.00501}
-    m_Extent: {x: 34.25444, y: 15.103867, z: 0.00501}
+    m_Center: {x: -1.5088844, y: 15.103867, z: -0.005015}
+    m_Extent: {x: 34.25444, y: 15.103867, z: 0.005015}
 --- !u!1 &1930208404
 GameObject:
   m_ObjectHideFlags: 0
